@@ -2,7 +2,7 @@
 
 https://github.com/ZhengPeiRu21/mod-individual-progression Original Source
 
-💡**Important** - https://github.com/ZhengPeiRu21/mod-individual-progression/wiki/List-of-Progression-Tiers Description of all progression tiers and their triggers (generally disregarded with this approach, with the exception of the war effort feature)
+💡**Important** - https://github.com/ZhengPeiRu21/mod-individual-progression/wiki/List-of-Progression-Tiers Description of all progression tiers and their triggers (generally disregarded with this approach, with the exception of the war effort feature, players completing it can start scarab lord quest chain one phase earlier)
 
 ## Assumption
 You want to experience Vanilla -> TBC -> WOTLK content in a phase-like progression (what blizzard did with the classic releases), where content access is realm-wide and every player is locked to the same progression level.
