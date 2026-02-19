@@ -106,18 +106,18 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 
 -- update quest texts for the new 'Simply Bang a Gong!' quest
 -- DELETE FROM `quest_request_items` WHERE `ID` IN (108743, 108744);
-DELETE FROM `quest_request_items` WHERE `ID` IN (108744);
+DELETE FROM `quest_request_items` WHERE `ID` = 108744;
 INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `CompletionText`, `VerifiedBuild`) VALUES 
 -- (108743, 1, 0, 'The Scarab Gong looms ominously before you. Steel yourself, $N; for once the Scarab Gong is rung, the gates of Ahn\'Qiraj will be opened.$B$BHowever, the Brood of Nozdomu and the Cenarion Circle will not reward you, unless you aid them.', 12340),
 (108744, 1, 0, '', NULL);
 
 -- DELETE FROM `quest_offer_reward` WHERE `ID` IN (108743, 108744);
-DELETE FROM `quest_offer_reward` WHERE `ID` IN (108744);
+DELETE FROM `quest_offer_reward` WHERE `ID` = 108744;
 INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
 -- (108743, 0, 0, 0, 0, 0, 0, 0, 0, 'From the ground near the gong springs a special crystal. Perhaps favor from the Brood.', 12340),
 (108744, 0, 0, 0, 0, 0, 0, 0, 0, '', NULL);
     
-DELETE FROM `quest_template_addon` WHERE `ID` IN (8743);
+DELETE FROM `quest_template_addon` WHERE `ID` = 8743;
 INSERT INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `SourceSpellID`, `PrevQuestID`, `NextQuestID`, `ExclusiveGroup`, `RewardMailTemplateID`, `RewardMailDelay`, 
 `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`) VALUES 
 (8743, 0, 0, 0, 8742, 0, 0, 0, 0, 0, 0, 910, 0, 0, 0, 0, 0);
@@ -132,10 +132,10 @@ INSERT INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `Sourc
 -- INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743), (180717, 108743);
 
 DELETE FROM `gameobject_queststarter` WHERE `id` = 180717 AND `quest` IN (8743, 108744);
-INSERT INTO `gameobject_queststarter` (`id`, `quest`) VALUES (180717, 8743), (180717);
+INSERT INTO `gameobject_queststarter` (`id`, `quest`) VALUES (180717, 8743);
 
-DELETE FROM `gameobject_questender` WHERE `id` = 180717 AND `quest` IN (8743);
-INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743), (180717);
+DELETE FROM `gameobject_questender` WHERE `id` = 180717 AND `quest` = 8743;
+INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743);
 
 DELETE FROM `creature_queststarter` WHERE `id` = 15693 AND `quest` IN (108744, 108745, 108746, 108747);
 INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES (15693, 108744), (15693, 108745), (15693, 108746), (15693, 108747);
