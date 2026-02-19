@@ -66,14 +66,15 @@ INSERT INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MinLevel`, `Ques
 (108747, 2, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 7, 0, 609, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Colossus of Ashi', 'Kill the Colossus of Ashi.', '', '', 'Return to Jonathan the Revelator at the Scarab Gong.', 15742, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', NULL);
 
 -- Reward Tabard of Flame, Hippogryph Hatchling and Riding Turtle (TCG) for Chaos and Destruction quest
-UPDATE quest_template
-SET RewardItem1 = 23705,
-    RewardAmount1 = 1,
-    RewardItem2 = 23713,
-    RewardAmount2 = 1,
-    RewardItem3 = 23720,
-    RewardAmount3 = 1
-WHERE Id = 108744;
+UPDATE `quest_template`
+SET
+ `RewardItem1` = 23705,
+ `RewardItemCount1` = 1,
+ `RewardItem2` = 23713,
+ `RewardItemCount2` = 1,
+ `RewardItem3` = 23720,
+ `RewardItemCount3` = 1
+WHERE `ID` = 108744;
 
 -- don't count quests for the loremaster achievement
 DELETE FROM `quest_template_addon` WHERE `ID` IN (108743, 108744, 108745, 108746, 108747);
