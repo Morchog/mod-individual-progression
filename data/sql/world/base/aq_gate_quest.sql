@@ -112,12 +112,14 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 -- (19, 0, 108747, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Ashi\' requires either quest 8743 or 108743 to be completed');
 
 -- update quest texts for the new 'Simply Bang a Gong!' quest
-DELETE FROM `quest_request_items` WHERE `ID` IN (108743, 108744);
+-- DELETE FROM `quest_request_items` WHERE `ID` IN (108743, 108744);
+DELETE FROM `quest_request_items` WHERE `ID` IN (108744);
 INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `CompletionText`, `VerifiedBuild`) VALUES 
 -- (108743, 1, 0, 'The Scarab Gong looms ominously before you. Steel yourself, $N; for once the Scarab Gong is rung, the gates of Ahn\'Qiraj will be opened.$B$BHowever, the Brood of Nozdomu and the Cenarion Circle will not reward you, unless you aid them.', 12340),
 (108744, 1, 0, '', NULL);
 
-DELETE FROM `quest_offer_reward` WHERE `ID` IN (108743, 108744);
+-- DELETE FROM `quest_offer_reward` WHERE `ID` IN (108743, 108744);
+DELETE FROM `quest_offer_reward` WHERE `ID` IN (108744);
 INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
 -- (108743, 0, 0, 0, 0, 0, 0, 0, 0, 'From the ground near the gong springs a special crystal. Perhaps favor from the Brood.', 12340),
 (108744, 0, 0, 0, 0, 0, 0, 0, 0, '', NULL);
