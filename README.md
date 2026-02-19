@@ -13,8 +13,12 @@ Achieve a controlled progression "feeling" with minimal tweaks. Updates will fee
 
 ## Changes
 - **Improved UX for "Progression Level Required" messages in `OnPlayerBeforeTeleport`.**
-- **Changed entry requirement for `MAP_BLACKWING_LAIR` from Rag kill to Onyxia kill, a.k.a. `PROGRESSION_ONYXIA = 2`** (⚠ Because *progresson_level = 1* is the earliest you can start with this approach (Rag killed and Ony available), you couldnt start off with a limited phase and still have T2 locked)
+- **Changed entry requirement for `MAP_BLACKWING_LAIR` from Rag kill to Onyxia kill, a.k.a. `PROGRESSION_ONYXIA = 2`** (⚠ Because *progresson_level = 1* is the earliest you can start with this approach (Rag killed and Ony available), you couldnt start off with a limited phase and still have T2 locked).
 - **`MAP_OUTLAND` now always requires `PROGRESSION_PRE_TBC = 8`** - also the default value for enabling draenei and blood elf races character creations.
-- **Increased event trigger range requirement for quest `A Pawn on the Eternal Board` from 20yd to 1000yd** - one of the scarab lord quests
-- **Forced completion of prerequisite for "What tomorrow brings" (scarab lord chain) if Progression Level > `PROGRESSION_PRE_AQ = 4`** - Allows players to start the chain regardless of participation in war effort
-- **Reward for quest `Complete the War Effort` removed and updated reward screen description to hint at the early Scarab Lord quest chain access**
+- **Increased event trigger range requirement for quest `A Pawn on the Eternal Board` from 20yd to 1000yd** - one of the scarab lord quests.
+- **Forced completion of prerequisite for "What tomorrow brings" (scarab lord chain) if Progression Level > `PROGRESSION_PRE_AQ = 4`** - Allows players to start the chain regardless of participation in war effort.
+- **Reward for quest `Complete the War Effort` removed and updated reward screen description to hint at the early Scarab Lord quest chain access.**
+- **Quest `Simply Bang a Gong!` removed.**
+- **Reward for quest `Chaos and Destruction` added - Tabard of Flame, Hippogryph Hatchling, Riding Turtle** (TCG items itroduced it late vanilla). Reasoning for the buffed rewards:
+    - ⚠ With `Simply Bang a Gong!` removed, the above questline becomes a direct extension to the Scarab Lord quest chain, which is already really long!
+    - ⚠ With `Simply Bang a Gong!` removed, there is no quick way to open the AQ gates enabling easy access to the raids - therefore if the realm is on a higher progression level (TBC/WOTLK) - acting as an extra incentive to do the SL chain.
