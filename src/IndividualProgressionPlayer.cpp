@@ -492,13 +492,13 @@ public:
                         sIndividualProgression->UpdateProgressionQuests(player);
                     }
                     break;
-                case SIMPLY_BANG_A_GONG:
-                    if (!sIndividualProgression->disableDefaultProgression)
-                    {
-                        sIndividualProgression->UpdateProgressionState(player, PROGRESSION_PRE_AQ);
-                        sIndividualProgression->UpdateProgressionQuests(player);
-                    }
-                    break;
+                // case SIMPLY_BANG_A_GONG:
+                //     if (!sIndividualProgression->disableDefaultProgression)
+                //     {
+                //         sIndividualProgression->UpdateProgressionState(player, PROGRESSION_PRE_AQ);
+                //         sIndividualProgression->UpdateProgressionQuests(player);
+                //     }
+                //     break;
                 case CHAOS_AND_DESTRUCTION:
                     if (!sIndividualProgression->disableDefaultProgression)
                     {

@@ -415,7 +415,8 @@ public:
 
     bool OnQuestReward(Player* player, GameObject* go, Quest const* quest, uint32 /*opt*/) override
     {
-        if ((quest->GetQuestId() != QUEST_BANG_A_GONG) && (player->GetQuestStatus(SIMPLY_BANG_A_GONG) != QUEST_STATUS_REWARDED))
+        // if ((quest->GetQuestId() != QUEST_BANG_A_GONG) && (player->GetQuestStatus(SIMPLY_BANG_A_GONG) != QUEST_STATUS_REWARDED))
+        if ((quest->GetQuestId() != QUEST_BANG_A_GONG))
             return false;
 
         if (auto* gongAI = dynamic_cast<gobject_scarab_gongAI*>(go->AI()))
@@ -426,7 +427,8 @@ public:
 
     bool OnGossipHello(Player* player, GameObject* go) override
     {
-        if ((player->GetQuestStatus(QUEST_BANG_A_GONG) == QUEST_STATUS_REWARDED) || (player->GetQuestStatus(SIMPLY_BANG_A_GONG) == QUEST_STATUS_REWARDED))
+        // if ((player->GetQuestStatus(QUEST_BANG_A_GONG) == QUEST_STATUS_REWARDED) || (player->GetQuestStatus(SIMPLY_BANG_A_GONG) == QUEST_STATUS_REWARDED))
+        if ((player->GetQuestStatus(QUEST_BANG_A_GONG) == QUEST_STATUS_REWARDED))
         {
             if (auto* gongAI = dynamic_cast<gobject_scarab_gongAI*>(go->AI()))
                 gongAI->OpenGate(player, false);

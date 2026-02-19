@@ -59,17 +59,27 @@ INSERT INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MinLevel`, `Ques
 `TimeAllowed`, `AllowableRaces`, `LogTitle`, `LogDescription`, `QuestDescription`, `AreaDescription`, `QuestCompletionLog`, `RequiredNpcOrGo1`, `RequiredNpcOrGo2`, `RequiredNpcOrGo3`, `RequiredNpcOrGo4`, `RequiredNpcOrGoCount1`, `RequiredNpcOrGoCount2`, `RequiredNpcOrGoCount3`, `RequiredNpcOrGoCount4`, `RequiredItemId1`, `RequiredItemId2`, `RequiredItemId3`, `RequiredItemId4`, `RequiredItemId5`, `RequiredItemId6`, 
 `RequiredItemCount1`, `RequiredItemCount2`, `RequiredItemCount3`, `RequiredItemCount4`, `RequiredItemCount5`, `RequiredItemCount6`, `Unknown0`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES 
 
-(108743, 0, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Simply Bang a Gong!', '', '', NULL, 'Return to The Scarab Gong in Silithus.', 0, 0, 0, 0, 0, 0, 0, 0, 9240, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, '', '', '', '', 12340),
+-- (108743, 0, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Simply Bang a Gong!', '', '', NULL, 'Return to The Scarab Gong in Silithus.', 0, 0, 0, 0, 0, 0, 0, 0, 9240, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, '', '', '', '', 12340),
 (108744, 2, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 7, 0, 609, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Chaos and Destruction', 'Kill Lieutenant General Nokhor, 3 Colossal Anubisath Warbringers and 12 Supreme Anubisath Warbringers.', '', '', 'Return to Jonathan the Revelator at the Scarab Gong.', 15818, 15743, 15758, 0, 1, 3, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', NULL),
 (108745, 2, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 7, 0, 609, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Colossus of Zora', 'Kill the Colossus of Zora.', '', '', 'Return to Jonathan the Revelator at the Scarab Gong.', 15740, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', NULL),
 (108746, 2, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 7, 0, 609, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Colossus of Regal', 'Kill the Colossus of Regal.', '', '', 'Return to Jonathan the Revelator at the Scarab Gong.', 15741, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', NULL),
 (108747, 2, 60, 60, 1377, 82, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 7, 0, 609, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Colossus of Ashi', 'Kill the Colossus of Ashi.', '', '', 'Return to Jonathan the Revelator at the Scarab Gong.', 15742, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', NULL);
 
+-- Reward Tabard of Flame, Hippogryph Hatchling and Riding Turtle (TCG) for Chaos and Destruction quest
+UPDATE quest_template
+SET RewardItem1 = 23705,
+    RewardAmount1 = 1,
+    RewardItem2 = 23713,
+    RewardAmount2 = 1,
+    RewardItem3 = 23720,
+    RewardAmount3 = 1
+WHERE Id = 108744;
+
 -- don't count quests for the loremaster achievement
 DELETE FROM `quest_template_addon` WHERE `ID` IN (108743, 108744, 108745, 108746, 108747);
 INSERT INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `SourceSpellID`, `PrevQuestID`, `NextQuestID`, `ExclusiveGroup`, `RewardMailTemplateID`, `RewardMailDelay`, 
 `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`) VALUES 
-(108743, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256),
+-- (108743, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256),
 (108744, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256),
 (108745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256),
 (108746, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256),
@@ -86,29 +96,29 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 (19, 0, 8857, 0, 1, 8, 0, 108747, 0, 0, 0, 0, 0, '',   'Quest \'Secrets of the Colossus - Ashi\' requires the \'Colossus of Ashi\' quest to be completed'),
 (19, 0, 8858, 0, 1, 8, 0, 108746, 0, 0, 0, 0, 0, '',   'Quest \'Secrets of the Colossus - Regal\' requires the \'Colossus of Regal\' quest to be completed'),
 (19, 0, 8859, 0, 1, 8, 0, 108745, 0, 0, 0, 0, 0, '',   'Quest \'Secrets of the Colossus - Zora\' requires the \'Colossus of Zora\' quest to be completed'),
-(19, 0, 108743, 0, 0, 8, 0, 8743, 0, 0, 1, 0, 0, '',   'Quest \'Simply Bang a Gong!\' requires the \'Bang a Gong!\' quest to NOT be completed'),
-(19, 0, 108743, 0, 0, 8, 0, 108850, 0, 0, 0, 0, 0, '', 'Quest \'Simply Bang a Gong!\' requires the \'Complete the War Effort\' quest to be completed'),
-(19, 0, 108743, 0, 1, 8, 0, 8743, 0, 0, 1, 0, 0, '',   'Quest \'Simply Bang a Gong!\' requires the \'Bang a Gong!\' quest to NOT be completed'),
-(19, 0, 108743, 0, 1, 8, 0, 108855, 0, 0, 0, 0, 0, '', 'Quest \'Simply Bang a Gong!\' requires the \'Complete the War Effort\' quest to be completed'),
+-- (19, 0, 108743, 0, 0, 8, 0, 8743, 0, 0, 1, 0, 0, '',   'Quest \'Simply Bang a Gong!\' requires the \'Bang a Gong!\' quest to NOT be completed'),
+-- (19, 0, 108743, 0, 0, 8, 0, 108850, 0, 0, 0, 0, 0, '', 'Quest \'Simply Bang a Gong!\' requires the \'Complete the War Effort\' quest to be completed'),
+-- (19, 0, 108743, 0, 1, 8, 0, 8743, 0, 0, 1, 0, 0, '',   'Quest \'Simply Bang a Gong!\' requires the \'Bang a Gong!\' quest to NOT be completed'),
+-- (19, 0, 108743, 0, 1, 8, 0, 108855, 0, 0, 0, 0, 0, '', 'Quest \'Simply Bang a Gong!\' requires the \'Complete the War Effort\' quest to be completed'),
 (19, 0, 108744, 0, 0, 8, 0, 108745, 0, 0, 0, 0, 0, '', 'Quest \'Chaos and Destruction\' requires the \'Colossus of Zora\' quest to be completed'),
 (19, 0, 108744, 0, 0, 8, 0, 108746, 0, 0, 0, 0, 0, '', 'Quest \'Chaos and Destruction\' requires the \'Colossus of Regal\' quest to be completed'),
 (19, 0, 108744, 0, 0, 8, 0, 108747, 0, 0, 0, 0, 0, '', 'Quest \'Chaos and Destruction\' requires the \'Colossus of Ashi\' quest to be completed'),
 (19, 0, 108745, 0, 0, 8, 0, 8743, 0, 0, 0, 0, 0, '',   'Quest \'Colossus of Zora\' requires either quest 8743 or 108743 to be completed'),
-(19, 0, 108745, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Zora\' requires either quest 8743 or 108743 to be completed'),
+-- (19, 0, 108745, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Zora\' requires either quest 8743 or 108743 to be completed'),
 (19, 0, 108746, 0, 0, 8, 0, 8743, 0, 0, 0, 0, 0, '',   'Quest \'Colossus of Regal\' requires either quest 8743 or 108743 to be completed'),
-(19, 0, 108746, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Regal\' requires either quest 8743 or 108743 to be completed'),
+-- (19, 0, 108746, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Regal\' requires either quest 8743 or 108743 to be completed'),
 (19, 0, 108747, 0, 0, 8, 0, 8743, 0, 0, 0, 0, 0, '',   'Quest \'Colossus of Ashi\' requires either quest 8743 or 108743 to be completed'),
-(19, 0, 108747, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Ashi\' requires either quest 8743 or 108743 to be completed');
+-- (19, 0, 108747, 0, 1, 8, 0, 108743, 0, 0, 0, 0, 0, '', 'Quest \'Colossus of Ashi\' requires either quest 8743 or 108743 to be completed');
 
 -- update quest texts for the new 'Simply Bang a Gong!' quest
 DELETE FROM `quest_request_items` WHERE `ID` IN (108743, 108744);
 INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `CompletionText`, `VerifiedBuild`) VALUES 
-(108743, 1, 0, 'The Scarab Gong looms ominously before you. Steel yourself, $N; for once the Scarab Gong is rung, the gates of Ahn\'Qiraj will be opened.$B$BHowever, the Brood of Nozdomu and the Cenarion Circle will not reward you, unless you aid them.', 12340),
+-- (108743, 1, 0, 'The Scarab Gong looms ominously before you. Steel yourself, $N; for once the Scarab Gong is rung, the gates of Ahn\'Qiraj will be opened.$B$BHowever, the Brood of Nozdomu and the Cenarion Circle will not reward you, unless you aid them.', 12340),
 (108744, 1, 0, '', NULL);
 
 DELETE FROM `quest_offer_reward` WHERE `ID` IN (108743, 108744);
 INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
-(108743, 0, 0, 0, 0, 0, 0, 0, 0, 'From the ground near the gong springs a special crystal. Perhaps favor from the Brood.', 12340),
+-- (108743, 0, 0, 0, 0, 0, 0, 0, 0, 'From the ground near the gong springs a special crystal. Perhaps favor from the Brood.', 12340),
 (108744, 0, 0, 0, 0, 0, 0, 0, 0, '', NULL);
     
 DELETE FROM `quest_template_addon` WHERE `ID` IN (8743);
@@ -116,14 +126,20 @@ INSERT INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `Sourc
 `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`) VALUES 
 (8743, 0, 0, 0, 8742, 0, 0, 0, 0, 0, 0, 910, 0, 0, 0, 0, 0);
 
-UPDATE `quest_template` SET `QuestDescription` = '' WHERE `ID` = 108743;    
+-- UPDATE `quest_template` SET `QuestDescription` = '' WHERE `ID` = 108743;
     
 -- Connect new 'Bang a Gong!' quest to the Scarab Gong in Silithus
-DELETE FROM `gameobject_queststarter` WHERE `id` = 180717 AND `quest` IN (8743, 108743, 108744);
-INSERT INTO `gameobject_queststarter` (`id`, `quest`) VALUES (180717, 8743), (180717, 108743);
+-- DELETE FROM `gameobject_queststarter` WHERE `id` = 180717 AND `quest` IN (8743, 108743, 108744);
+-- INSERT INTO `gameobject_queststarter` (`id`, `quest`) VALUES (180717, 8743), (180717, 108743);
 
-DELETE FROM `gameobject_questender` WHERE `id` = 180717 AND `quest` IN (8743, 108743);
-INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743), (180717, 108743);
+-- DELETE FROM `gameobject_questender` WHERE `id` = 180717 AND `quest` IN (8743, 108743);
+-- INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743), (180717, 108743);
+
+DELETE FROM `gameobject_queststarter` WHERE `id` = 180717 AND `quest` IN (8743, 108744);
+INSERT INTO `gameobject_queststarter` (`id`, `quest`) VALUES (180717, 8743), (180717);
+
+DELETE FROM `gameobject_questender` WHERE `id` = 180717 AND `quest` IN (8743);
+INSERT INTO `gameobject_questender` (`id`, `quest`) VALUES (180717, 8743), (180717);
 
 DELETE FROM `creature_queststarter` WHERE `id` = 15693 AND `quest` IN (108744, 108745, 108746, 108747);
 INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES (15693, 108744), (15693, 108745), (15693, 108746), (15693, 108747);
