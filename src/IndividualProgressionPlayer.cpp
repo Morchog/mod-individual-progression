@@ -248,6 +248,7 @@ public:
         if (!sIndividualProgression->enabled || player->IsGameMaster() || sIndividualProgression->isExcludedFromProgression(player))
             return true;
 
+        InstanceTemplate const* instanceTemplate = sObjectMgr->GetInstanceTemplate(mapid);
         // #### VANILLA #####
         // #### VANILLA #####
         // #### VANILLA #####
@@ -470,8 +471,6 @@ public:
             return false;
         }
         
-
-        InstanceTemplate const* instanceTemplate = sObjectMgr->GetInstanceTemplate(mapid);
         if (instanceTemplate)
         {
             if (instanceTemplate->Parent == MAP_OUTLAND && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_PRE_TBC))
