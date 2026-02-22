@@ -203,25 +203,26 @@ enum ProgressionSettings
 
 enum ProgressionState : uint8         // Progression stands for what has been completed
 {
-    PROGRESSION_START           = 0,
-    PROGRESSION_MOLTEN_CORE     = 1,  // BWL available
-    PROGRESSION_ONYXIA          = 2,
-    PROGRESSION_BLACKWING_LAIR  = 3,  // ZG, AQ War effort, AQ quest line
-    PROGRESSION_PRE_AQ          = 4,  // AQ gates open, raids available, AQ outdoors war 
-    PROGRESSION_AQ_WAR          = 5,  // AQ gates open, raids, Field Duty quests and all Cenarion Hold npcs available
-    PROGRESSION_AQ              = 6,  // Naxx40 and Scourge Invasion
-    PROGRESSION_NAXX40          = 7,  // Into the Breach
-    PROGRESSION_PRE_TBC         = 8,  // Karazhan, Gruul's Lair, Magtheridon's Lair
-    PROGRESSION_TBC_TIER_1      = 9,  // Serpentshrine Cavern, Tempest Keep
-    PROGRESSION_TBC_TIER_2      = 10, // Hyjal Summit and Black Temple
-    PROGRESSION_TBC_TIER_3      = 11, // Zul'Aman
-    PROGRESSION_TBC_TIER_4      = 12, // Sunwell Plateau
-    PROGRESSION_TBC_TIER_5      = 13, // WotLK Naxx, EoE, OS
-    PROGRESSION_WOTLK_TIER_1    = 14, // Ulduar
-    PROGRESSION_WOTLK_TIER_2    = 15, // TotC
-    PROGRESSION_WOTLK_TIER_3    = 16, // ICC
-    PROGRESSION_WOTLK_TIER_4    = 17, // Ruby Sanctum
-    PROGRESSION_WOTLK_TIER_5    = 18
+    PROGRESSION_START           = 0,	// Dungeons
+    PROGRESSION_MOLTEN_CORE     = 1,  	// MC, Onyxia available                                 (VERIFIED) Phase 1 - MC/ONY
+    PROGRESSION_ONYXIA          = 2,	// BLW available - trigger			                    (VERIFIED) Phase 2 - BWL
+    PROGRESSION_BLACKWING_LAIR  = 3,    // ZG available + WE start + early SL quest             (VERIFIED) Phase 3 - Rise of the Blood God
+    PROGRESSION_PRE_AQ          = 4,    // Scarab Lord + AQ20 + AQ40 available		            (VERIFIED) Phase 4 - The Gates of Ahn'Qiraj
+    PROGRESSION_AQ_WAR          = 5,    // Intermediate								            (VERIFIED) 
+    PROGRESSION_AQ              = 6,    // Naxx available + Scourge Invasion	                (VERIFIED) Phase 5 - Shadow of the Necropolis
+    PROGRESSION_NAXX40          = 7,    // TBC dungeons available		                                   Phase 6 - The Burning Crusade
+    PROGRESSION_PRE_TBC         = 8,    // Mag/Gruul/K10 available                                         Phase 7 - Before the Storm
+    PROGRESSION_TBC_TIER_1      = 9,    // TK and SSC available                                            Phase 8 - The Vials of Eternity
+    PROGRESSION_TBC_TIER_2      = 10,   // Hyjal Summit and Black Temple available                         Phase 9 - The Black Temple
+    PROGRESSION_TBC_TIER_3      = 11,   // Zul'Aman available                                              Phase 10 - The Gods of Zul’Aman
+    PROGRESSION_TBC_TIER_4      = 12,   // Sunwell and MagTerrace + Quel'Danas available                   Phase 11 - Fury of the Sunwell
+    PROGRESSION_TBC_TIER_5      = 13,   // WOTLK dungeons available                                        Phase 12 - Wrath of the Lich King
+    PROGRESSION_WOTLK_TIER_0    = 14,   // Naxx, EoE, OS available                                         Phase 13 - Echoes of Doom
+    PROGRESSION_WOTLK_TIER_1    = 15,   // Ulduar available                                                Phase 14 - Secrets of Ulduar
+    PROGRESSION_WOTLK_TIER_2    = 16,   // TotC available                                                  Phase 15 - Call of the Crusade
+    PROGRESSION_WOTLK_TIER_3    = 17,   // ICC available                                                   Phase 16 - Fall of the Lich King
+    PROGRESSION_WOTLK_TIER_4    = 18,   // Ruby Sanctum available                                          Phase 17 - Defending the Ruby Sanctum
+    PROGRESSION_WOTLK_TIER_5    = 19    // 
 };
 
 enum RandomDungeonIds : uint16

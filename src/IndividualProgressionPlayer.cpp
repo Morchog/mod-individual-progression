@@ -248,30 +248,33 @@ public:
         if (!sIndividualProgression->enabled || player->IsGameMaster() || sIndividualProgression->isExcludedFromProgression(player))
             return true;
 
+        // #### VANILLA #####
+        // #### VANILLA #####
+        // #### VANILLA #####
+        if (mapid == MAP_ONYXIAS_LAIR)
+        {
+            if (player->GetLevel() == IP_LEVEL_WOTLK)
+            {
+                return true;
+            }
+
+            if(player->GetLevel() < IP_LEVEL_VANILLA)
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("You must be at least level 60 to enter this instance.");
+                return false;
+            }
+
+            if (!player->HasItemCount(ITEM_DRAKEFIRE_AMULET))
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("You must have the Drakefire Amulet to enter Onyxia's Lair.");
+                return false;
+            }
+        }
         if (mapid == MAP_BLACKWING_LAIR && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_ONYXIA))
         {
             ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
             // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_MOLTEN_CORE);
             return false;
-        }
-        if (mapid == MAP_ONYXIAS_LAIR)
-        {
-            if (player->GetLevel() <= IP_LEVEL_TBC) // vanilla version
-            {
-                if (player->GetLevel() < 50)
-                    return false;
-                if (sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5)) // death knights
-                    return false;
-                if (!player->HasItemCount(ITEM_DRAKEFIRE_AMULET))
-                    return false;
-            }
-			else // WotLK
-            {
-                if (player->GetLevel() != IP_LEVEL_WOTLK)
-                    return false;
-                // if (!player->HasItemCount(ITEM_DRAKEFIRE_AMULET))
-                //     return false;
-            }
         }
         if (mapid == MAP_ZUL_GURUB)
         {
@@ -296,9 +299,14 @@ public:
             // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_PRE_AQ);
             return false;
         }
+
+
+        // #### TBC #####
+        // #### TBC #####
+        // #### TBC #####
         if (mapid == MAP_OUTLAND)
         {
-            if (!sIndividualProgression->hasPassedProgression(player, PROGRESSION_PRE_TBC))
+            if (!sIndividualProgression->hasPassedProgression(player, PROGRESSION_NAXX40))
             {
                 // The player may be in the Azuremyst area which is on the outlands map - check the area ID
                 // return IsTBCRaceStartingZone(mapid, x, y, z);
@@ -314,54 +322,13 @@ public:
                 return false;
             }
         }
-        if (mapid == MAP_ZUL_AMAN && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_3))
+        if (mapid == MAP_MAGTHERIDONS_LAIR || mapid == MAP_GRUULS_LAIR || mapid == MAP_KARAZHAN)
         {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_3);
-            return false;
-        }
-        if (mapid == MAP_NORTHREND && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This expansion's content is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_5);
-            return false;
-        }
-        if (mapid == MAP_ULDUAR && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_1))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_1);
-            return false;
-        }
-        if ((mapid == MAP_TRIAL_OF_THE_CHAMPION || mapid == MAP_TRIAL_OF_THE_CRUSADER) && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_2))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_2);
-            return false;
-        }
-        // This will also restrict other Frozen Halls dungeons, because Forge of Souls must be completed first to access them
-        if ((mapid == MAP_ICECROWN_CITADEL || mapid == MAP_THE_FORGE_OF_SOULS) && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_3))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_3);
-            return false;
-        }
-        if (mapid == MAP_THE_RUBY_SANCTUM && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_4))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_4);
-            return false;
-        }
-        if (mapid == MAP_MAGISTERS_TERRACE && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_4))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_4);
-            return false;
-        }
-        if (mapid == MAP_THE_SUNWELL && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_4))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_4);
-            return false;
+            if (!sIndividualProgression->hasPassedProgression(player, PROGRESSION_PRE_TBC))
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+                return false;
+            }
         }
         if (mapid == MAP_TEMPEST_KEEP)
         {
@@ -424,6 +391,85 @@ public:
                 return false;
             }
         }
+        if (mapid == MAP_ZUL_AMAN && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_3))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_3);
+            return false;
+        }
+        if (mapid == MAP_MAGISTERS_TERRACE && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_4))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This dungeon is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_4);
+            return false;
+        }
+        if (mapid == MAP_THE_SUNWELL && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_4))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_4);
+            return false;
+        }
+
+
+        // #### WOTLK #####
+        // #### WOTLK #####
+        // #### WOTLK #####
+        if (mapid == MAP_NORTHREND && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This expansion's content is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_5);
+            return false;
+        }
+        if(instanceTemplate->Parent == MAP_NORTHREND && mapid == MAP_NAXXRAMAS && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            return false;
+        }
+        if (mapid == MAP_THE_OBSIDIAN_SANCTUM && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_1);
+            return false;
+        }
+        if (mapid == MAP_THE_EYE_OF_ETERNITY && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_1);
+            return false;
+        }
+        if (mapid == MAP_ULDUAR && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_1))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_1);
+            return false;
+        }
+        if ((mapid == MAP_TRIAL_OF_THE_CHAMPION || mapid == MAP_TRIAL_OF_THE_CRUSADER) && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_2))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_2);
+            return false;
+        }
+        // This will also restrict other Frozen Halls dungeons, because Forge of Souls must be completed first to access them
+        if ((mapid == MAP_ICECROWN_CITADEL || mapid == MAP_THE_FORGE_OF_SOULS) && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_3))
+        {
+            if(mapid == MAP_THE_FORGE_OF_SOULS)
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("This dungeon is not available in the current Phase.");
+            }
+            else
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            }
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_3);
+            return false;
+        }
+        if (mapid == MAP_THE_RUBY_SANCTUM && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_4))
+        {
+            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+            // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_WOTLK_TIER_4);
+            return false;
+        }
+        
 
         InstanceTemplate const* instanceTemplate = sObjectMgr->GetInstanceTemplate(mapid);
         if (instanceTemplate)
