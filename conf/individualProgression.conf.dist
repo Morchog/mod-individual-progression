@@ -258,7 +258,7 @@ IndividualProgression.RepeatableVanillaQuestsXP = 1
 #        Default:     0 - TBC races always available to be created
 #                     1-18 - Set a higher required progression stage to create TBC race characters
 #
-IndividualProgression.TbcRacesUnlockProgression = 0
+IndividualProgression.TbcRacesUnlockProgression = 7
 
 # IndividualProgression.DeathKnightUnlockProgression
 #
