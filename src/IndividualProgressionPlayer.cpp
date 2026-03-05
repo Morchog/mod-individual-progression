@@ -421,11 +421,9 @@ public:
             // ChatHandler(player->GetSession()).PSendSysMessage("Progression Level Required = |cff00ffff{}|r", PROGRESSION_TBC_TIER_5);
             return false;
         }
-        if(instanceTemplate->Parent == MAP_NORTHREND && mapid == MAP_NAXXRAMAS && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
-        {
-            ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
-            return false;
-        }
+
+        // NAXX map check at the bottom of method body
+
         if (mapid == MAP_THE_OBSIDIAN_SANCTUM && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
         {
             ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
@@ -473,6 +471,13 @@ public:
         
         if (instanceTemplate)
         {
+            // NAXX wotlk progression level check
+            if(instanceTemplate->Parent == MAP_NORTHREND && mapid == MAP_NAXXRAMAS && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_WOTLK_TIER_0))
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+                return false;
+            }
+
             if (instanceTemplate->Parent == MAP_OUTLAND && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_PRE_TBC))
             {
                 ChatHandler(player->GetSession()).PSendSysMessage("This expansion's content is not available in the current Phase.");
