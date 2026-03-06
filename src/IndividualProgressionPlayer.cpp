@@ -478,6 +478,13 @@ public:
                 return false;
             }
 
+            // NAXX40 vanilla progression level check
+            if(instanceTemplate->Parent != MAP_NORTHREND && mapid == MAP_NAXXRAMAS && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_AQ))
+            {
+                ChatHandler(player->GetSession()).PSendSysMessage("This raid is not available in the current Phase.");
+                return false;
+            }
+
             if (instanceTemplate->Parent == MAP_OUTLAND && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_PRE_TBC))
             {
                 ChatHandler(player->GetSession()).PSendSysMessage("This expansion's content is not available in the current Phase.");
